@@ -38,6 +38,8 @@ app.get('/about/:id', controller.about);
 
 app.get('/bad', controller.bad);
 
+app.get('/portofolio', controller.portofolio);
+
 //listen to the port server
 app.listen(port, () => {
   console.log(`listening on port ${port}`);

@@ -20,10 +20,19 @@ const about = (req, res) => {
   console.log(req.params.id);
   res.render(`./../views/about.hbs`, {
     header: 'Ketiga',
-    pageTitle: 'About Page',
+    pageTitle: `About Page with id params ${req.params.id}`,
     description: 'this is about endpoint',
     year: 2016
   });
 };
 
-module.exports = { bad, about, home };
+const portofolio = (req, res) => {
+  res.render('./../views/portofolio', {
+    header: 'Ke empat',
+    pageTitle: 'Portofolio Page',
+    description: 'this isi portofolio page',
+    year: 2001
+  });
+};
+
+module.exports = { bad, about, home, portofolio };
