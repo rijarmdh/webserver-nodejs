@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const hbs = require('hbs');
-const port = 3000;
+const port = process.env.PORT || 3000;
 const controller = require('./controller/controller');
 
 app.set('view engine', 'hbs'); // adalah view templating untuk html
